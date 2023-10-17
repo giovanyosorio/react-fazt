@@ -14,18 +14,21 @@ function TaskForm({createTask}) {
             title,
             description
         })
+        setTitle("")
+        setDescription("")
     }
     
   return (
   
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Escribe tu tarea" 
-            
-            onChange={(e)=>setTitle(e.target.value)}/>
+            onChange={(e)=>setTitle(e.target.value)}
+            value={title}
+            autoFocus/>
 
             <textarea name="" placeholder="Escribe la descripcion de la tarea"id="" cols="30" rows="10"
             onChange={e=>setDescription(e.target.value)}
-            
+            value={description}
             ></textarea>
                 <button >
                     Guardar

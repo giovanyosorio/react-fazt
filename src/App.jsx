@@ -1,12 +1,10 @@
-
-import ReactDom from "react-dom/client"
+import TaskList from "../src/components/TaskList"
 
 function App() {
 
   return (
     <main className="board">
-
-      <h1>Hola mundo 😀</h1>
+      <TaskList/>
     </main>
   )
 }

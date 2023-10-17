@@ -4,9 +4,12 @@ import TaskForm from "../src/components/TaskForm"
 function App() {
 
   return (
-    <main className="board">
-      <TaskForm  />
-      <TaskList />
+    <main className="bg-zinc-900 h-screen">
+      <div className="container mx-auto p-10">
+        <TaskForm  />
+        <TaskList />
+      </div>
+
     </main>
   )
 }

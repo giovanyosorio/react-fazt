@@ -1,3 +1,4 @@
+import TaskCard from "./TaskCard"
 
 function TaskList({tasks}) {
 
@@ -9,10 +10,7 @@ function TaskList({tasks}) {
       <main className="board">
             {
                 tasks.map((task)=>(
-                    <div key={task.id}>
-                        <h1>{task.title}</h1>
-                        <p>{task.description}</p>
-                    </div>
+                <TaskCard key={task.id} task={task}/>
                 ))
             }
       </main>

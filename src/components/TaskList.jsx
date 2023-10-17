@@ -1,19 +1,12 @@
-import {tasks as data} from "../tasks";
-import { useState ,useEffect} from "react";
-console.log(data);
-function TaskList() {
 
-    const [tasks,setTasks]= useState([])
+function TaskList({tasks}) {
 
-    useEffect(()=>{
-        setTasks(data)
-    },[])
+
     if(tasks.length===0){
         return <h1>no hay tareas aun</h1>
     }
     return (
       <main className="board">
-  
             {
                 tasks.map((task)=>(
                     <div key={task.id}>

@@ -9,13 +9,13 @@ function TaskList() {
         return <h1>no hay tareas aun</h1>
     }
     return (
-      <main className="board">
+      <div className="grid grid-cols-4 gap-2">
             {
                 tasks.map((task)=>(
                 <TaskCard key={task.id} task={task} />
                 ))
             }
-      </main>
+      </div>
     )
   }
   

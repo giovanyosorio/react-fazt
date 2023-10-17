@@ -15,12 +15,16 @@ function App() {
     const newTask=[...tasks,{title:task.title,id:tasks.length,description:task.description}]
     setTasks(newTask)
   }
-
+  
+  function deleteTask(taskId){
+    const idTask=tasks.filter(task=>task.id!==taskId)
+    setTasks(idTask)
+  }
 
   return (
     <main className="board">
       <TaskForm createTask={createTask}/>
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask}/>
     </main>
   )
 }
